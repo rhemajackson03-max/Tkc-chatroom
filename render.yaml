@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: tkc-chat-clone
+    env: python
+    region: frankfurt
+    plan: free
+    buildCommand: ""
+    startCommand: python tkc_clone_chatroom.py
+    envVars:
+      - key: SECRET_KEY
+        value: change_this_secret
+      - key: ADMIN_TOKEN
+        value: change_this_admin_password
